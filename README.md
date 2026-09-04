@@ -33,3 +33,12 @@ Part G — Exit Ticket
 Self-study Extension 
 Option 2: Add a Node.js Version Matrix
 ปรับ workflow ให้ทดสอบมากกว่าหนึ่ง Node.js version และอธิบายว่า matrix ช่วยตรวจ compatibility อย่างไร
+
+------------------------------------------------------------------
+
+ปรับ ci.yml:14-18 ให้ใช้ matrix ทดสอบ Node.js 20 และ 22 แล้ว โดยแต่ละเวอร์ชันจะทำงานเป็น job แยกกัน และตั้งค่า setup-node จากค่าใน matrix
+
+Matrix ช่วยตรวจ compatibility โดยรัน test suite เดียวกันบนหลาย runtime หากโค้ดหรือ dependency ทำงานไม่ได้กับเวอร์ชันใด job นั้นจะแจ้งแยกชัดเจน ขณะที่เวอร์ชันอื่นยังรายงานผลได้ตามปกติ
+
+ตรวจสอบแล้วด้วย npm.cmd test: ผ่านทั้ง 2 tests.
+
