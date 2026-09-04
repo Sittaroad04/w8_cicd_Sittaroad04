@@ -19,9 +19,7 @@
 | **Pipeline ช่วยลดความเสี่ยงอย่างไร** | Pipeline รัน `npm ci` และ `npm test` อัตโนมัติทุกครั้งที่มีการ push หรือ pull request ทำให้ตรวจพบข้อผิดพลาดก่อนนำโค้ดไปใช้งาน ลดความเสี่ยงจากการ deploy โค้ดที่มี bug |
 
 
-Self-study Extension 
-Option 2: Add a Node.js Version Matrix
-ปรับ workflow ให้ทดสอบมากกว่าหนึ่ง Node.js version และอธิบายว่า matrix ช่วยตรวจ compatibility อย่างไร
+Part G — Exit Ticket
 
 | ข้อ   | คำถาม                                                                               | คำตอบ                                                                                                                                                                                            |
 | ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -30,3 +28,8 @@ Option 2: Add a Node.js Version Matrix
 | **3** | Green pipeline ยืนยันอะไรได้บ้าง และยืนยันอะไรไม่ได้?                               | **ยืนยันได้:** ขั้นตอนใน pipeline ผ่านและ test ที่กำหนดผ่านทั้งหมด **ยืนยันไม่ได้:** application ไม่มี bug ทั้งหมด, production จะใช้งานได้ 100%, performance/security หรือระบบภายนอกจะไม่มีปัญหา |
 | **4** | เหตุใดเราจึงต้องทดลองสร้าง red pipeline?                                            | เพื่อทดสอบว่า pipeline สามารถ **ตรวจจับข้อผิดพลาดได้จริง** และเข้าใจกระบวนการ **Fail → แก้ไข → Test ใหม่ → Green**                                                                               |
 | **5** | หาก test ผ่านแต่ application ใช้งานจริงไม่ได้ ควรเพิ่ม test หรือ pipeline stage ใด? | ควรเพิ่ม **Integration Test / E2E Test** และอาจเพิ่ม **Deploy to Staging + Smoke Test/Health Check** เพื่อทดสอบ application ในสภาพแวดล้อมที่ใกล้เคียงการใช้งานจริง                               |
+
+
+Self-study Extension 
+Option 2: Add a Node.js Version Matrix
+ปรับ workflow ให้ทดสอบมากกว่าหนึ่ง Node.js version และอธิบายว่า matrix ช่วยตรวจ compatibility อย่างไร
