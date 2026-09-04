@@ -1,7 +1,7 @@
 const http = require('http');
 
 function createMessage(name = 'Cloud Student') {
-  return `Hello, ${name}! Hello, Nina! This test should fail.`;
+  return `Hello, ${name}! This test should fail.`;
 }
 
 if (require.main === module) {
